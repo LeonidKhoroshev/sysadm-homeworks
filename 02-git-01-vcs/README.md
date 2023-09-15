@@ -1,31 +1,5 @@
 # Домашнее задание к занятию «Системы контроля версий» - Леонид Хорошев
 
-### Цель задания
-
-В результате выполнения задания вы: 
-
-* научитесь подготоваливать новый репозиторий к работе;
-* сохранять, перемещать и удалять файлы в системе контроля версий.  
-
-
-### Чеклист готовности к домашнему заданию
-
-1. Установлена консольная утилита для работы с Git.
-
-
-### Инструкция к заданию
-
-1. Домашнее задание выполните в GitHub-репозитории. 
-2. В личном кабинете отправьте на проверку ссылку на ваш репозиторий с домашним заданием.
-3. Любые вопросы по решению задач задавайте в чате учебной группы.
-
-
-### Дополнительные материалы для выполнения задания
-
-1. [GitHub](https://github.com/).
-2. [Инструкция по установке Git](https://git-scm.com/downloads).
-3. [Книга про  Git на русском языке](https://git-scm.com/book/ru/v2/) - рекомендуем к обязательному изучению главы 1-7.
-   
    
 ------
 
@@ -37,34 +11,42 @@
 ### Создание репозитория и первого коммита
 
 1. Зарегистрируйте аккаунт на [https://github.com/](https://github.com/). Если предпочитаете другое хранилище для репозитория, можно использовать его.
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.1.png)
 2. Создайте публичный репозиторий, который будете использовать дальше на протяжении всего курса, желательное с названием `devops-netology`.
-   Обязательно поставьте галочку `Initialize this repository with a README`. 
-   
-    ![Диалог создания репозитория](img/github-new-repo-1.jpg)
-    
+   Обязательно поставьте галочку `Initialize this repository with a README`.
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.2.png)
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.3.png)      
 3. Создайте [авторизационный токен](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) для клонирования репозитория.
-4. Склонируйте репозиторий, используя протокол HTTPS (`git clone ...`).
- 
-    ![Клонирование репозитория](img/github-clone-repo-https.jpg)
-    
-5. Перейдите в каталог с клоном репозитория (`cd devops-netology`).
-6. Произведите первоначальную настройку Git, указав своё настоящее имя, чтобы нам было проще общаться, и email (`git config --global user.name` и `git config --global user.email johndoe@example.com`). 
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.4.png)
+4. Склонируйте репозиторий, используя протокол HTTPS 
+```
+git clone https://github.com/LeonidKhoroshev/devops-netology
+```
+5. Перейдите в каталог с клоном репозитория.
+```
+cd devops-netology
+```
+6. Произведите первоначальную настройку Git, указав своё настоящее имя, чтобы нам было проще общаться, и email (`git config --global user.name` и `git config --global userl johndoe@example.com`).
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.12.png)
 7. Выполните команду `git status` и запомните результат.
 8. Отредактируйте файл `README.md` любым удобным способом, тем самым переведя файл в состояние `Modified`.
 9. Ещё раз выполните `git status` и продолжайте проверять вывод этой команды после каждого следующего шага. 
 10. Теперь посмотрите изменения в файле `README.md`, выполнив команды `git diff` и `git diff --staged`.
 11. Переведите файл в состояние `staged` (или, как говорят, просто добавьте файл в коммит) командой `git add README.md`.
-12. И ещё раз выполните команды `git diff` и `git diff --staged`. Поиграйте с изменениями и этими командами, чтобы чётко понять, что и когда они отображают. 
+12. И ещё раз выполните команды `git diff` и `git diff --staged`. Поиграйте с изменениями и этими командами, чтобы чётко понять, что и когда они отображают.
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.5.png)
 13. Теперь можно сделать коммит `git commit -m 'First commit'`.
 14. И ещё раз посмотреть выводы команд `git status`, `git diff` и `git diff --staged`.
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.6.png)
 
 ### Создание файлов `.gitignore` и второго коммита
 
 1. Создайте файл `.gitignore` (обратите внимание на точку в начале файла), проверьте его статус сразу после создания. 
-1. Добавьте файл `.gitignore` в следующий коммит (`git add...`).
-1. На одном из следующих блоков вы будете изучать `Terraform`, давайте сразу создадим соотвествующий каталог `terraform` и внутри этого каталога — файл `.gitignore` по примеру: https://github.com/github/gitignore/blob/master/Terraform.gitignore.  
-1. В файле `README.md` опишите своими словами, какие файлы будут проигнорированы в будущем благодаря добавленному `.gitignore`.
-1. Закоммитьте все новые и изменённые файлы. Комментарий к коммиту должен быть `Added gitignore`.
+2. Добавьте файл `.gitignore` в следующий коммит (`git add...`).
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.7.png)
+3. На одном из следующих блоков вы будете изучать `Terraform`, давайте сразу создадим соотвествующий каталог `terraform` и внутри этого каталога — файл `.gitignore` по примеру: https://github.com/github/gitignore/blob/master/Terraform.gitignore.  
+4. В файле `README.md` опишите своими словами, какие файлы будут проигнорированы в будущем благодаря добавленному `.gitignore`.
+5. Закоммитьте все новые и изменённые файлы. Комментарий к коммиту должен быть `Added gitignore`.
 
 ### Эксперимент с удалением и перемещением файлов (третий и четвёртый коммит)
 
