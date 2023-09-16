@@ -48,10 +48,18 @@ git config --global user.email khoroshevlv@gmail.com
 
 ### Создание файлов `.gitignore` и второго коммита
 
-1. Создайте файл `.gitignore` (обратите внимание на точку в начале файла), проверьте его статус сразу после создания. 
+1. Создайте файл `.gitignore` (обратите внимание на точку в начале файла), проверьте его статус сразу после создания.
+```
+nano .gitignore
+git status
+``` 
 2. Добавьте файл `.gitignore` в следующий коммит (`git add...`).
+```
+git add .gitignore
+```
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.7.png)
-3. На одном из следующих блоков вы будете изучать `Terraform`, давайте сразу создадим соотвествующий каталог `terraform` и внутри этого каталога — файл `.gitignore` по примеру: https://github.com/github/gitignore/blob/master/Terraform.gitignore.  
+3. На одном из следующих блоков вы будете изучать `Terraform`, давайте сразу создадим соотвествующий каталог `terraform` и внутри этого каталога — файл `.gitignore` по примеру: https://github.com/github/gitignore/blob/master/Terraform.gitignore.
+
 4. В файле `README.md` опишите своими словами, какие файлы будут проигнорированы в будущем благодаря добавленному `.gitignore`.
 5. Закоммитьте все новые и изменённые файлы. Комментарий к коммиту должен быть `Added gitignore`.
 
