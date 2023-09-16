@@ -66,7 +66,8 @@ nano .gitignore
 ```
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.8.png)
 4. В файле `README.md` опишите своими словами, какие файлы будут проигнорированы в будущем благодаря добавленному `.gitignore`.
-Для удобства проверки домашнего задания содержание .gitignore в каталоге terraform опишу ниже:
+
+https://github.com/LeonidKhoroshev/devops-netology/edit/main/README.md
 
 5. Закоммитьте все новые и изменённые файлы. Комментарий к коммиту должен быть `Added gitignore`.
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.9.png)
