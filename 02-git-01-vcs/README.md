@@ -79,48 +79,49 @@ nano will_be_deleted.txt
 nano will_be_moved.txt
 git add will_be_deleted.txt
 git add will_be_moved.txt
+git commit -m `Prepare to delete and move`.
 ```
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.10.png)
 2. Удалите файл `will_be_deleted.txt` с диска и из репозитория.
 ```
 rm will_be_deleted.txt
 ```
-1. Переименуйте (переместите) файл `will_be_moved.txt` на диске и в репозитории, чтобы он стал называться `has_been_moved.txt`.
-1. Закоммитьте результат работы с комментарием `Moved and deleted`.
+3. Переименуйте (переместите) файл `will_be_moved.txt` на диске и в репозитории, чтобы он стал называться `has_been_moved.txt`.
+```
+cp will_be_moved.txt has_been_moved.txt
+```
+4. Закоммитьте результат работы с комментарием `Moved and deleted`.
+```
+git commit -m `Moved and deleted`.
+```
 
 ### Проверка изменения
 
-1. В результате предыдущих шагов в репозитории должно быть как минимум пять коммитов (если вы сделали ещё промежуточные — нет проблем):
+1.В результате предыдущих шагов в репозитории должно быть как минимум пять коммитов (если вы сделали ещё промежуточные — нет проблем):
     * `Initial Commit` — созданный GitHub при инициализации репозитория. 
     * `First commit` — созданный после изменения файла `README.md`.
     * `Added gitignore` — после добавления `.gitignore`.
     * `Prepare to delete and move` — после добавления двух временных файлов.
-    * `Moved and deleted` — после удаления и перемещения временных файлов. 
-2. Проверьте это, используя комманду `git log`. Подробно о формате вывода этой команды мы поговорим на следующем занятии, но посмотреть, что она отображает, можно уже сейчас.
+    * `Moved and deleted` — после удаления и перемещения временных файлов.
+Проверка пройдена
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.11.png)
+Однако, при переходе в репозиторий видны файлы `will_be_moved.txt` и `will_be_deleted.txt`. Удалим их:
+```
+git rm will_be_moved.txt
+git rm will_be_deleted.txt
+git commt -m "error correction"
+```
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.13.png)
+Теперь все корректно.
 
 ### Отправка изменений в репозиторий
 
 Выполните команду `git push`, если Git запросит логин и пароль — введите ваши логин и пароль от GitHub. 
+```
+git push https://github.com/LeonidKhoroshev/devops-netology
+```
+В качестве результата отправьте ссылку на репозиторий.
 
-В качестве результата отправьте ссылку на репозиторий. 
+https://github.com/LeonidKhoroshev/devops-netology
 
 ----
-
-### Правила приёма домашнего задания
-
-В личном кабинете отправлена ссылка на ваш репозиторий.
-
-
-### Критерии оценки
-
-Зачёт:
-
-* выполнены все задания;
-* ответы даны в развёрнутой форме;
-* приложены соответствующие скриншоты и файлы проекта;
-* в выполненных заданиях нет противоречий и нарушения логики.
-
-На доработку:
-
-* задание выполнено частично или не выполнено вообще;
-* в логике выполнения заданий есть противоречия и существенные недостатки. 
