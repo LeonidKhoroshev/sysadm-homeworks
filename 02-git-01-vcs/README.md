@@ -30,13 +30,19 @@ git config --global user.email khoroshevlv@gmail.com
 ```
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.12.png)
 7. Выполните команду `git status` и запомните результат.
+
 8. Отредактируйте файл `README.md` любым удобным способом, тем самым переведя файл в состояние `Modified`.
-9. Ещё раз выполните `git status` и продолжайте проверять вывод этой команды после каждого следующего шага. 
+   
+9. Ещё раз выполните `git status` и продолжайте проверять вывод этой команды после каждого следующего шага.
+
 10. Теперь посмотрите изменения в файле `README.md`, выполнив команды `git diff` и `git diff --staged`.
+    
 11. Переведите файл в состояние `staged` (или, как говорят, просто добавьте файл в коммит) командой `git add README.md`.
+    
 12. И ещё раз выполните команды `git diff` и `git diff --staged`. Поиграйте с изменениями и этими командами, чтобы чётко понять, что и когда они отображают.
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.5.png)
 13. Теперь можно сделать коммит `git commit -m 'First commit'`.
+   
 14. И ещё раз посмотреть выводы команд `git status`, `git diff` и `git diff --staged`.
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.6.png)
 
