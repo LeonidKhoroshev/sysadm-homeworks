@@ -59,15 +59,32 @@ git add .gitignore
 ```
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.7.png)
 3. На одном из следующих блоков вы будете изучать `Terraform`, давайте сразу создадим соотвествующий каталог `terraform` и внутри этого каталога — файл `.gitignore` по примеру: https://github.com/github/gitignore/blob/master/Terraform.gitignore.
-
+```
+mkdir terraform
+cd terraform
+nano .gitignore
+```
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.8.png)
 4. В файле `README.md` опишите своими словами, какие файлы будут проигнорированы в будущем благодаря добавленному `.gitignore`.
+Для удобства проверки домашнего задания содержание .gitignore в каталоге terraform опишу ниже:
+
 5. Закоммитьте все новые и изменённые файлы. Комментарий к коммиту должен быть `Added gitignore`.
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.9.png)
 
 ### Эксперимент с удалением и перемещением файлов (третий и четвёртый коммит)
 
 1. Создайте файлы `will_be_deleted.txt` (с текстом `will_be_deleted`) и `will_be_moved.txt` (с текстом `will_be_moved`) и закоммите их с комментарием `Prepare to delete and move`.
-1. В случае необходимости обратитесь к [официальной документации](https://git-scm.com/book/ru/v2/Основы-Git-Запись-изменений-в-репозиторий) — здесь подробно описано, как выполнить следующие шаги. 
-1. Удалите файл `will_be_deleted.txt` с диска и из репозитория. 
+```
+nano will_be_deleted.txt
+nano will_be_moved.txt
+git add will_be_deleted.txt
+git add will_be_moved.txt
+```
+![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.10.png)
+2. Удалите файл `will_be_deleted.txt` с диска и из репозитория.
+```
+rm will_be_deleted.txt
+```
 1. Переименуйте (переместите) файл `will_be_moved.txt` на диске и в репозитории, чтобы он стал называться `has_been_moved.txt`.
 1. Закоммитьте результат работы с комментарием `Moved and deleted`.
 
