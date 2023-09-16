@@ -26,7 +26,7 @@ cd devops-netology
 6. Произведите первоначальную настройку Git, указав своё настоящее имя, чтобы нам было проще общаться, и email.
 ```
 git config --global user.name Leonid Khoroshev
-git config --global email khoroshevlv@gmail.com
+git config --global user.email khoroshevlv@gmail.com
 ```
 ![alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/git1/git1.12.png)
 7. Выполните команду `git status` и запомните результат.
