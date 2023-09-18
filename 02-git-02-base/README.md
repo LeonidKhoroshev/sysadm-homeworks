@@ -63,19 +63,21 @@ ____
    
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.1.png)
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.2.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.4.png)
 2. Аналогично создайте аннотированный тег `v0.1`.
 
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.3.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.5.png)
 
 3. Перейдите на страницу просмотра тегов в GitHab (и в других репозиториях) и посмотрите, чем отличаются созданные теги. 
 
 Просмотр тегов в GitLab:
 
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.4.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.6.png)
 
 Просмотр тегов в GitHub:
 
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.5.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.7.png)
 
 
 ## Задание 3. Ветки 
