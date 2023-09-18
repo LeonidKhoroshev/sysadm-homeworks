@@ -30,7 +30,7 @@
 
 4. Добавление репозитория на GitLab, как дополнительного к созданному в рамках предыдущего домашнего задания:
 ```
-git remote add gitlab https://gitlab.com/YOUR_LOGIN/devops-netology.git
+git remote add gitlab https://gitlab.com/LeonidKhoroshev/devops_netology
 git push -u gitlab main
 ```
 
