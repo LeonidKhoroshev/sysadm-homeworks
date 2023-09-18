@@ -1,4 +1,4 @@
-# Домашнее задание к занятию «Основы Git»
+# Домашнее задание к занятию «Основы Git» - Леонид Хорошев
 
 ### Цель задания
 
@@ -9,31 +9,10 @@
 * попрактикуетесь работать с тегами;
 * поработаете с Git при помощи визуального редактора.
 
-### Чеклист готовности к домашнему заданию
-
-1. Установлена консольная утилита для работы с Git.
-2. Есть возможность зарегистрироваться на GitHub, GitLab.
-3. Регистрация на Bitbucket не является обязательной. 
-
-
-### Инструкция к заданию
-
-1. В личном кабинете отправьте на проверку ссылки на ваши репозитории.
-2. Любые вопросы по решению задач задавайте в чате учебной группы.
-
 ------
 
 ## Задание 1. Знакомимся с GitLab и Bitbucket 
 
-Из-за сложности доступа к Bitbucket в работе достаточно использовать два репозитория: GitHub и GitLab.
-
-Иногда при работе с Git-репозиториями надо настроить свой локальный репозиторий так, чтобы можно было 
-отправлять и принимать изменения из нескольких удалённых репозиториев. 
-
-Это может понадобиться при работе над проектом с открытым исходным кодом, если автор проекта не даёт права на запись в основной репозиторий.
-
-Также некоторые распределённые команды используют такой принцип работы, когда каждый разработчик имеет свой репозиторий, а в основной репозиторий пушатся только конечные результаты 
-работы над задачами. 
 
 ### GitLab
 
@@ -68,7 +47,6 @@ https://gitlab.com/YOUR_LOGIN/devops-netology. Изучите предлагае
 
 ### Bitbucket* (задание со звёздочкой) 
 
-Это самостоятельное задание, его выполнение необязательно.
 ____
 
 Теперь необходимо проделать всё то же самое с [Bitbucket](https://bitbucket.org/). 
@@ -83,33 +61,8 @@ ____
 
 Если всё проделано правильно, то результат команды `git remote -v` должен быть следующий:
 
-```bash
-$ git remote -v
-bitbucket https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (fetch)
-bitbucket https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (push)
-gitlab	  https://gitlab.com/andrey.borue/devops-netology.git (fetch)
-gitlab	  https://gitlab.com/andrey.borue/devops-netology.git (push)
-origin	  https://github.com/andrey-borue/devops-netology.git (fetch)
-origin	  https://github.com/andrey-borue/devops-netology.git (push)
-```
 
-Дополнительно можете добавить удалённые репозитории по `ssh`, тогда результат будет примерно такой:
 
-```bash
-git remote -v
-bitbucket	git@bitbucket.org:andreyborue/devops-netology.git (fetch)
-bitbucket	git@bitbucket.org:andreyborue/devops-netology.git (push)
-bitbucket-https	https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (fetch)
-bitbucket-https	https://andreyborue@bitbucket.org/andreyborue/devops-netology.git (push)
-gitlab	git@gitlab.com:andrey.borue/devops-netology.git (fetch)
-gitlab	git@gitlab.com:andrey.borue/devops-netology.git (push)
-gitlab-https	https://gitlab.com/andrey.borue/devops-netology.git (fetch)
-gitlab-https	https://gitlab.com/andrey.borue/devops-netology.git (push)
-origin	git@github.com:andrey-borue/devops-netology.git (fetch)
-origin	git@github.com:andrey-borue/devops-netology.git (push)
-origin-https	https://github.com/andrey-borue/devops-netology.git (fetch)
-origin-https	https://github.com/andrey-borue/devops-netology.git (push)
-```
 
 Выполните push локальной ветки `main` в новые репозитории. 
 
