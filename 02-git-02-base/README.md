@@ -21,9 +21,11 @@
 1. GitLab. Для [регистрации](https://gitlab.com/users/sign_up)  можно использовать аккаунт Google, GitHub и другие.
    
 2. Создание нового проекта: 
+
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git1.1.png)
 
 3. Вывод команды `git remote -v` на localhost (виртуалка на базе Centos7, развернутая в VirtualBox для выполнения домашних заданий по данному курсу).
+
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git1.2.png)
 
 4. Добавление репозитория на GitLab, как дополнительного к созданному в рамках предыдущего домашнего задания:
@@ -33,6 +35,7 @@ git push -u gitlab main
 ```
 
 5. Проверка изменения работы команды `git remote -v`.
+
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git1.3.png)
 
 
@@ -40,7 +43,9 @@ git push -u gitlab main
 ____
 
 Создание репозитория и добавление его как дополнительного выполнено аналогично операциям с репозиторием в GitLab
+
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git1.5.png)
+
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git1.4.png)
 
 Поскольку использование Bitbucket предполагает постоянный обход блокировок (в моем случае через включенный VPN клиент, что не удобно при работе в териминале PuTTY), то дальнейшее выполнение домашнего задания выполнено в репозиториях GitHub и GitLab.
