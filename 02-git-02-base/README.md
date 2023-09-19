@@ -68,6 +68,7 @@ ____
 
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.3.png)
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.5.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git2.8.png)
 
 3. Перейдите на страницу просмотра тегов в GitHab (и в других репозиториях) и посмотрите, чем отличаются созданные теги. 
 
