@@ -108,8 +108,24 @@ ____
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.6.png)
 
 7. Теперь измените содержание файла `README.md`, добавив новую строчку.
-1. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network 
+
+```
+nano README.md
+# devops-netology
+Repository from my educational projects
+This repository created following netology's lesson about version control system and Git introduction.
+A new row has been created.
+```
+
+8. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network 
 и как изменится вывод команды `git log`.
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.7.png)
+
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.8.png)
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.9.png)
 
 ## Задание 4. Упрощаем себе жизнь
 
