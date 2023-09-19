@@ -86,12 +86,28 @@ ____
 Давайте посмотрим, как будет выглядеть история коммитов при создании веток. 
 
 1. Переключитесь обратно на ветку `main`, которая должна быть связана с веткой `main` репозитория на `github`.
-1. Посмотрите лог коммитов и найдите хеш коммита с названием `Prepare to delete and move`, который был создан в пределах предыдущего домашнего задания. 
-1. Выполните `git checkout` по хешу найденного коммита. 
-1. Создайте новую ветку `fix`, базируясь на этом коммите `git switch -c fix`.
-1. Отправьте новую ветку в репозиторий на GitHub `git push -u origin fix`.
-1. Посмотрите, как визуально выглядит ваша схема коммитов: https://github.com/YOUR_ACCOUNT/devops-netology/network. 
-1. Теперь измените содержание файла `README.md`, добавив новую строчку.
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.1.png)
+
+2. Посмотрите лог коммитов и найдите хеш коммита с названием `Prepare to delete and move`, который был создан в пределах предыдущего домашнего задания.
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.2.png)
+
+3. Выполните `git checkout` по хешу найденного коммита. 
+4. Создайте новую ветку `fix`, базируясь на этом коммите `git switch -c fix`.
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.3.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.4.png)
+
+5. Отправьте новую ветку в репозиторий на GitHub `git push -u origin fix`.
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.5.png)
+
+6. Посмотрите, как визуально выглядит ваша схема коммитов: https://github.com/YOUR_ACCOUNT/devops-netology/network.
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/01-intro-01/git2/git3.6.png)
+
+7. Теперь измените содержание файла `README.md`, добавив новую строчку.
 1. Отправьте изменения в репозиторий и посмотрите, как изменится схема на странице https://github.com/YOUR_ACCOUNT/devops-netology/network 
 и как изменится вывод команды `git log`.
 
