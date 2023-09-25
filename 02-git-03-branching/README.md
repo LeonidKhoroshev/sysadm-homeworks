@@ -216,22 +216,12 @@ git push https://github.com/LeonidKhoroshev/devops-netology git-rebase
 
 Сливаем ветку `git-merge` в main и отправляем изменения в репозиторий, должно получиться без конфликтов:
 
-```bash
-$ git merge git-merge
-Merge made by the 'recursive' strategy.
- branching/merge.sh | 5 +++--
- 1 file changed, 3 insertions(+), 2 deletions(-)
-$ git push
-#!/bin/bash
-Enumerating objects: 1, done.
-Counting objects: 100% (1/1), done.
-Writing objects: 100% (1/1), 223 bytes | 223.00 KiB/s, done.
-Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
-```  
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.13.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.14.png)
 
 В результате получаем такую схему:
   
-![Первый мерж](img/02.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.15.png)
 
 #### Rebase
 
