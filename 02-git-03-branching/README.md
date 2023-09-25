@@ -221,7 +221,7 @@ git push https://github.com/LeonidKhoroshev/devops-netology git-rebase
 
 В результате получаем такую схему:
   
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.15.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merga1.15.png)
 
 #### Rebase
 
