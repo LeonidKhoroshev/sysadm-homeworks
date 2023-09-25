@@ -64,7 +64,7 @@ git commit -m "prepare for merge and rebase"
 ```
 git checkout -b git-merge
 ```
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.2.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.2.png)
 
 **Шаг 2**. Замените в ней содержимое файла `merge.sh` на:
 
@@ -90,8 +90,8 @@ git add branching
 git commit -m "merge: @ instead *"
 git push https://github.com/LeonidKhoroshev/devops-netology git-merge
 ```
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.3.png)
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.4.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.3.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.4.png)
 
 **Шаг 4.** Разработчик подумал и решил внести ещё одно изменение в `merge.sh`:
  
@@ -114,8 +114,8 @@ done
 git commit -m "merge: use shift"
 git push https://github.com/LeonidKhoroshev/devops-netology git-merge
 ```
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.5.png)
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.6.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.5.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.6.png)
 
 #### Изменим main  
 
@@ -145,7 +145,6 @@ echo "====="
 **Шаг 1.** Предположим, что теперь другой участник нашей команды не сделал `git pull` либо просто хотел ответвиться не от последнего коммита в `main`, а от коммита, когда мы только создали два файла
 `merge.sh` и `rebase.sh` на первом шаге.  
 Для этого при помощи команды `git log` найдём хеш коммита `prepare for merge and rebase` и выполним `git checkout` на него так:
-`git checkout 8baf217e80ef17ff577883fda90f6487f67bbcea` (хеш будет другой).
 **Шаг 2.** Создадим ветку `git-rebase`, основываясь на текущем коммите. 
 **Шаг 3.** И изменим содержимое файла `rebase.sh` на следующее, тоже починив скрипт, но немного в другом стиле:
 
