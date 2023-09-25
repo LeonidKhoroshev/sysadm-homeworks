@@ -56,6 +56,7 @@ git add branching
 git checkout main
 git commit -m "prepare for merge and rebase"
 ```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.1.png)
 
 #### Подготовка файла merge.sh 
  
@@ -63,6 +64,7 @@ git commit -m "prepare for merge and rebase"
 ```
 git checkout -b git-merge
 ```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.2.png)
 
 **Шаг 2**. Замените в ней содержимое файла `merge.sh` на:
 
@@ -77,7 +79,20 @@ for param in "$@"; do
 done
 ```
 
-**Шаг 3.** Создайте коммит `merge: @ instead *`, отправьте изменения в репозиторий.  
+```
+nano branching/merge.sh
+git add branching
+```
+
+
+**Шаг 3.** Создайте коммит `merge: @ instead *`, отправьте изменения в репозиторий. 
+```
+git commit -m "merge: @ instead *"
+git push https://github.com/LeonidKhoroshev/devops-netology git-merge
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.3.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.4.png)
+
 **Шаг 4.** Разработчик подумал и решил внести ещё одно изменение в `merge.sh`:
  
 ```bash
@@ -92,9 +107,15 @@ while [[ -n "$1" ]]; do
 done
 ```
 
-Теперь скрипт будет отображать каждый переданный ему параметр отдельно. 
+Теперь скрипт будет отображать каждый переданный ему параметр отдельно.
 
 **Шаг 5.** Создайте коммит `merge: use shift` и отправьте изменения в репозиторий. 
+```
+git commit -m "merge: use shift"
+git push https://github.com/LeonidKhoroshev/devops-netology git-merge
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.5.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/megre1.6.png)
 
 #### Изменим main  
 
