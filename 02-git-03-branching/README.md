@@ -226,39 +226,13 @@ git push https://github.com/LeonidKhoroshev/devops-netology git-rebase
 #### Rebase
 
 **Шаг 1.** Перед мержем ветки `git-rebase` выполним её `rebase` на main. Да, мы специально создали ситуацию с конфликтами, чтобы потренироваться их решать. 
-**Шаг 2.** Переключаемся на ветку `git-rebase` и выполняем `git rebase -i main`. 
-В открывшемся диалоге должно быть два выполненных коммита, давайте заодно объединим их в один, 
-указав слева от нижнего `fixup`. 
-В результате получаем:
 
-```bash
-$ git rebase -i main
-Auto-merging branching/rebase.sh
-CONFLICT (content): Merge conflict in branching/rebase.sh
-error: could not apply dc4688f... git 2.3 rebase @ instead *
-Resolve all conflicts manually, mark them as resolved with
-"git add/rm <conflicted_files>", then run "git rebase --continue".
-You can instead skip this commit: run "git rebase --skip".
-To abort and get back to the state before "git rebase", run "git rebase --abort".
-Could not apply dc4688f... git 2.3 rebase @ instead *
-``` 
+**Шаг 2.** Переключаемся на ветку `git-rebase` и выполняем `git rebase -i main`. 
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.16.png)
 
 Если посмотреть содержимое файла `rebase.sh`, то увидим метки, оставленные Git для решения конфликта:
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.17.png)
 
-```bash
-cat rebase.sh
-#!/bin/bash
-# display command line options
-count=1
-for param in "$@"; do
-<<<<<<< HEAD
-    echo "\$@ Parameter #$count = $param"
-=======
-    echo "Parameter: $param"
->>>>>>> dc4688f... git 2.3 rebase @ instead *
-    count=$(( $count + 1 ))
-done
-```
 
 **Шаг 3.** Удалим метки, отдав предпочтение варианту:
 
@@ -268,79 +242,28 @@ echo "\$@ Parameter #$count = $param"
 
 **Шаг 4.** Сообщим Git, что конфликт решён `git add rebase.sh` и продолжим rebase `git rebase --continue`.
 
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.18.png)
+
 **Шаг 5.** Опять получим конфликт в файле `rebase.sh` при попытке применения нашего второго коммита. Давайте разрешим конфликт, оставив строчку `echo "Next parameter: $param"`.
-
-**Шаг 6.** Далее опять сообщаем Git о том, что конфликт разрешён — `git add rebase.sh` — и продолжим rebase — `git rebase --continue`.
-
-В результате будет открыт текстовый редактор, предлагающий написать комментарий к новому объединённому коммиту:
-
-```
-# This is a combination of 2 commits.
-# This is the 1st commit message:
-
-Merge branch 'git-merge'
-
-# The commit message #2 will be skipped:
-
-# git 2.3 rebase @ instead * (2)
-```
-
-Все строчки, начинающиеся на `#`, будут проигнорированны. 
-
-После сохранения изменения Git сообщит:
-
-```
-Successfully rebased and updated refs/heads/git-rebase
-```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.19.png)
+**Шаг 6.** Далее опять сообщаем Git о том, 
+что конфликт разрешён — `git add rebase.sh` — и продолжим rebase — `git rebase --continue`.
 
 **Шаг 7.** И попробуем выполнить `git push` либо `git push -u origin git-rebase`, чтобы точно указать, что и куда мы хотим запушить. 
 
 Эта команда завершится с ошибкой:
-
-```bash
-git push
-To github.com:andrey-borue/devops-netology.git
- ! [rejected]        git-rebase -> git-rebase (non-fast-forward)
-error: failed to push some refs to 'git@github.com:andrey-borue/devops-netology.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-```
-
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.20.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.21.png)
 Это произошло, потому что мы пытаемся перезаписать историю. 
 
 **Шаг 8.** Чтобы Git позволил нам это сделать, добавим флаг `force`:
-
-```bash
-git push -u origin git-rebase -f
-Enumerating objects: 10, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 443 bytes | 443.00 KiB/s, done.
-Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:andrey-borue/devops-netology.git
- + 1829df1...e3b942b git-rebase -> git-rebase (forced update)
-Branch 'git-rebase' set up to track remote branch 'git-rebase' from 'origin'.
-```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.22.png)
 
 **Шаг 9**. Теперь можно смержить ветку `git-rebase` в main без конфликтов и без дополнительного мерж-комита простой перемоткой: 
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.23.png)
 
-```
-$ git checkout main
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.24.png)
 
-$ git merge git-rebase
-Updating 6158b76..45893d1
-Fast-forward
- branching/rebase.sh | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
-```
-
-*В качестве результата работы по всем заданиям приложите ссылку на .md-файл в вашем репозитории.*
  
 ----
 
