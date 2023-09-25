@@ -120,6 +120,10 @@ git push https://github.com/LeonidKhoroshev/devops-netology git-merge
 #### Изменим main  
 
 **Шаг 1.** Вернитесь в ветку `main`. 
+```
+git checkout main
+```
+
 **Шаг 2.** Предположим, что пока мы работали над веткой `git-merge`, кто-то изменил `main`. Для этого
 изменим содержимое файла `rebase.sh` на:
 
@@ -140,12 +144,30 @@ echo "====="
 
 **Шаг 3.** Отправляем изменённую ветку `main` в репозиторий.
 
+```
+git add branching
+git commit -m "changing rebase.sh"
+git push https://github.com/LeonidKhoroshev/devops-netology main
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.7.png)
+
 #### Подготовка файла rebase.sh  
 
 **Шаг 1.** Предположим, что теперь другой участник нашей команды не сделал `git pull` либо просто хотел ответвиться не от последнего коммита в `main`, а от коммита, когда мы только создали два файла
 `merge.sh` и `rebase.sh` на первом шаге.  
 Для этого при помощи команды `git log` найдём хеш коммита `prepare for merge and rebase` и выполним `git checkout` на него так:
-**Шаг 2.** Создадим ветку `git-rebase`, основываясь на текущем коммите. 
+```
+git log --oneline
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.8.png)
+
+**Шаг 2.** Создадим ветку `git-rebase`, основываясь на текущем коммите.
+```
+git checkout -f e790614
+git checkout git-rebase
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.9.png)
+
 **Шаг 3.** И изменим содержимое файла `rebase.sh` на следующее, тоже починив скрипт, но немного в другом стиле:
 
 ```bash
@@ -162,8 +184,36 @@ echo "====="
 ```
 
 **Шаг 4.** Отправим эти изменения в ветку `git-rebase` с комментарием `git-rebase 1`.
+```
+git add branching
+git commit -m "git-rebase 1"
+git push https://github.com/LeonidKhoroshev/devops-netology git-rebase
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.10.png)
+
 
 **Шаг 5.** И сделаем ещё один коммит `git-rebase 2` с пушем, заменив `echo "Parameter: $param"` на `echo "Next parameter: $param"`.
+
+```
+nano branching/rebase.sh
+```
+
+```
+#!/bin/bash
+# display command line options
+count=1 for param in "$@"; do
+    echo "Next parameter: $param"
+    count=$(( $count + 1 )) done
+echo "====="
+```
+
+```
+git add branching
+git commit -m "git-rebase 2"
+git push https://github.com/LeonidKhoroshev/devops-netology git-rebase
+```
+
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.11.png)
 
 #### Промежуточный итог  
 
