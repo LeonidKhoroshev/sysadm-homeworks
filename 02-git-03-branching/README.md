@@ -60,6 +60,9 @@ git commit -m "prepare for merge and rebase"
 #### Подготовка файла merge.sh 
  
 **Шаг 1.** Создайте ветку `git-merge`. 
+```
+git checkout -b git-merge
+```
 
 **Шаг 2**. Замените в ней содержимое файла `merge.sh` на:
 
