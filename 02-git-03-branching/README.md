@@ -1,4 +1,4 @@
-# Домашнее задание к занятию «Ветвления в Git»
+# Домашнее задание к занятию «Ветвления в Git» - Леонид Хорошев
 
 ### Цель задания
 
@@ -41,7 +41,21 @@ done
 
 Этот скрипт отображает на экране все параметры одной строкой, а не разделяет их.
 
-**Шаг 2.** Создадим коммит с описанием `prepare for merge and rebase` и отправим его в ветку main. 
+```
+mkdir branching
+cd branching
+nano merge.sh
+nano rebase.sh
+cd ..
+git add branching
+```
+
+**Шаг 2.** Создадим коммит с описанием `prepare for merge and rebase` и отправим его в ветку main.
+
+```
+git checkout main
+git commit -m "prepare for merge and rebase"
+```
 
 #### Подготовка файла merge.sh 
  
