@@ -264,7 +264,49 @@ echo "\$@ Parameter #$count = $param"
 
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge1.24.png)
 
- Репозиторий devops-netology
- https://github.com/LeonidKhoroshev/devops-netology
  
 ----
+
+**Выполним доработку домашнего задания по следующим замечаниям**
+
+1. Слияние ветки git-merge в main
+```
+git checkout main
+git merge git-merge
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge2.1.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge2.2.png)
+
+Отправляем изменения в удаленный репозиторий и смотрим график слияния веток
+```
+git push https://github.com/LeonidKhoroshev/devops-netology
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge2.3.png)
+
+2. Слияние ветки git-rebase в main
+Для корректного выполнения задания, необходимо отменить коммит с предыдущим слиянием
+```
+git checkout git-rebase
+git log --oneline
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge2.4.png)
+```
+git revert -m 1 3c1d687
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge2.5.png)
+
+Проверяем, что команда `git revert` отработала успешно
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge2.7.png)
+
+Далее выполняем промежуточный коммит в ветке git-rebase "для более наглядного графика" и выполним слияние ветки git-rebase в main
+```
+git commit -m "git rebase 3"
+git checkout main
+git merge git-rebase
+git push https://github.com/LeonidKhoroshev/devops-netology
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-03-branching/merge/merge2.6.png)
+
+
+ Репозиторий devops-netology
+ https://github.com/LeonidKhoroshev/devops-netology
