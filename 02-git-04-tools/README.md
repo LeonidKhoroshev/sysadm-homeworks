@@ -72,10 +72,23 @@ git log -L :globalPluginDirs:plugins.go
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git7.png)
 
 Пробуем через регулярное выражение:
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git8.png)
+Снова неудача, хотя это странно, так как данный ход решения кажется верным, более того, аналогичные примеры приведенные в лекции - отлично работали.
 
-
+Пойдем другим путем:
+```
+git log -S 'globalPluginDirs' --oneline
+```
+Флаг -S,  показывает только те коммиты, в которых изменение в коде повлекло за собой добавление или удаление данной функции. 
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git9.png)
+Мы видим, ыто функция добавлена коммитом 8364383, о чем свидетельствует комментарий о добавлении плагинов (напомним, что файл, содержащий функцию называется plugins.go), и далее функция была еще 8 раз изменена.
 
 * Кто автор функции `synchronizedWriters`?
 
+Воспользуемся функцией из предыдущего задания, только с более подробным выводом:
+```
+git log -S 'synchronizedWriters'
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git10.png)
 
-
+Автор первого коммита, в котором добавлена искомая функция - Martin Atkin.
