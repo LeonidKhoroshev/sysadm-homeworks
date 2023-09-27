@@ -71,6 +71,9 @@ git log -L :globalPluginDirs:plugins.go
 В результате получаем ошибку (как я понял путь к файлу не найден):
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git7.png)
 
+Пробуем через регулярное выражение:
+
+
 
 * Кто автор функции `synchronizedWriters`?
 
