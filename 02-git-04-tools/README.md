@@ -75,13 +75,39 @@ git log -L :globalPluginDirs:plugins.go
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git8.png)
 Снова неудача, хотя это странно, так как данный ход решения кажется верным, более того, аналогичные примеры приведенные в лекции - отлично работали.
 
-Пойдем другим путем:
+### В соответствии с полученными замечаниями рамках доработки данного пункта домашнего задания пробуем получить корректный вывод изменений тела функции через флаг -L
 ```
-git log -S 'globalPluginDirs' --oneline
+git log -L:globalPluginDirs:plugins.go
 ```
-Флаг -S,  показывает только те коммиты, в которых изменение в коде повлекло за собой добавление или удаление данной функции. 
-![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git9.png)
-Мы видим, ыто функция добавлена коммитом 8364383, о чем свидетельствует комментарий о добавлении плагинов (напомним, что файл, содержащий функцию называется plugins.go), и далее функция была еще 8 раз изменена.
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git11.png)
+Скорее всего проблема не в некорректной записи команды 'git log -L', а в версии Git.
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git12.png)
+Так и есть, пробуем обновить версию git
+```
+yum upgrade git
+yum update git
+```
+Результатов нет, следовательно необходимос качать git из стороннего репозитория, так как стандартные репозитории Centos7 безнадежно устарели
+```
+yum install http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm
+yum install git
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git13.png)
+Новая версия git установлена успешно, повторяем поиск изменений в функции
+```
+git log -L:globalPluginDirs:plugins.go
+```
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git14.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git15.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git16.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git17.png)
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git18.png)
+
+Обилие информации на скриншотах демонтсрирует удобство работьы в последней версии Git, хэши коммитов выделены желтым цветом, изменения, внесенные в функцию globalPluginDirs выделены зелеными и красными цветами (добавленные и удаленные части кода).
+
+А теперь, для удобства прочтения информации посмотрим краткий вывод
+![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git19.png)
+Изменения в функцию вносились в 5 коммитах.
 
 * Кто автор функции `synchronizedWriters`?
 
@@ -92,3 +118,6 @@ git log -S 'synchronizedWriters'
 ![Alt text](https://github.com/LeonidKhoroshev/sysadm-homeworks/blob/devsys10/02-git-04-tools/tool/git10.png)
 
 Автор первого коммита, в котором добавлена искомая функция - Martin Atkin.
+
+
+
